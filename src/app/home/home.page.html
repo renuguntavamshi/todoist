@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title id="x">
+      Add todo tasks  here in the app as of now 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item >
+    <ion-input type="text" [(ngModel)]="newtodo" ></ion-input> 
+    <ion-button slot="end" fill="clear" (click)="add()" >
+      <ion-icon name="add" slot="icon-only"></ion-icon>
+    </ion-button>
+  </ion-item>
+  <ion-list>
+    <ion-item *ngFor="let x of todos">
+      {{x}}
+    </ion-item>
+  </ion-list>
+  <div id="xyz"><ion-button href="./details">Submit</ion-button></div>
+</ion-content>
